@@ -71,7 +71,7 @@
         $('#cypher_input').keyup();
       } else {
         if(isNaN(Number(val))) {
-          $('#substitution .plaintext').html('<p class="error">栅栏数出错</p>');
+          $('#substitution .plaintext').html('<p class="error">Wrong distance</p>');
         } else {
           substitution_num = Number(val);
           $('#cypher_input').keyup();
@@ -117,7 +117,7 @@
       }
     });
     if(illegal_data) {
-      $('#morse .plaintext').html('<p class="error">输入了非摩斯电码数据</p>');
+      $('#morse .plaintext').html('<p class="error">Not morse code</p>');
     } else {
       ciphertext = ciphertext.split(/\s+/g);
 
@@ -128,7 +128,7 @@
             plaintext += morse_code[val];
             return ciphertext + val + ' ';
           } else {
-            plaintext = '字符出错，出错项为：'+ ciphertext + ' <span class="error">' + val + '</span>';
+            plaintext = 'Wrong characters: '+ ciphertext + ' <span class="error">' + val + '</span>';
             return ;
           }
         }, '');
@@ -144,7 +144,7 @@
     ciphertext = ciphertext.split('');
     let text_arr = [];
     if(ciphertext.length % substitution_num !== 0) {
-      $('#substitution .plaintext').html('<p class="error">字数不符，应为 '+substitution_num+' 的倍数。</p>');
+      $('#substitution .plaintext').html('<p class="error">Number of characters should be a mutiple of ' + substitution_num + '</p>');
       return ;
     }
     ciphertext.map(function(val, idx) {
@@ -218,7 +218,7 @@
 
     $('#cypher_input').on('keyup', function(evnt) {
       let val = $(this).val();
-      $('.searching-info').html('密文长度为：'+val.length);
+      $('.searching-info').html('length of Ciphertext: ' + val.length);
       let decoding = $('#nav .active').attr('data-target');
 
       switch(decoding) {
