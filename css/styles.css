@@ -143,9 +143,9 @@ h2 {
   background: #eee;
 }
 .caesar-line:hover:after {
-  content: ' 点击复制';
+  content: ' Click to Copy';
   display: inline;
 }
 .caesar-line.hover:after {
-  content: ' 复制成功';
+  content: ' Copied';
 }
