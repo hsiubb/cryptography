@@ -1,0 +1,151 @@
+@charset 'utf-8';
+
+@font-face {
+  font-family: "Source";
+	src: url('../font/SourceHanSerifSC-Regular.otf');
+}
+@font-face {
+  font-family: "coure";
+	src: url('../font/consola.ttf');
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html {font-family: Arial,"Source";font-size: 14px;line-height: 1.429;}
+a {color: inherit;text-decoration: none;outline-style: none;}
+ul, ol, li {list-style: none;}
+input {border: 1px solid #ddd;background: #f8f8f8;border-radius: 3px;}
+img {border: 0 none;}
+
+.fl {float: left; _display: inline;}
+.fr {float: right; _display: inline;}
+.clr {clear: both; height: 0; overflow: hidden;}
+.clrfix {*zoom: 1;}
+.clrfix:before, .clrfix:after {content: '\0020';display: block;height: 0;clear: both;visibility: hidden;}
+
+.inputs {
+  position: relative;
+	width: 1200px;
+  height: 70px;
+	margin: 20px auto;
+}
+.cypher-input {
+	display: block;
+  width: 100%;
+	padding: 10px 140px 10px 10px;
+	border: 1px solid #ddd;
+}
+.searching-info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 10px;
+  color: #999;
+}
+.cypher-info {
+  display: none;
+  margin-top: 10px;
+  color: #666;
+}
+
+.nav {
+	width: 1200px;
+	padding: 10px;
+	margin: auto;
+}
+.nav li {
+	display: inline-block;
+	width: 8em;
+  margin: 0 5px;
+  text-align: center;
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+.nav a {
+  position: relative;
+  bottom: 4px;
+  right: 4px;
+  display: block;
+	padding: 5px;
+  background: #fff;
+  border-radius: 3px;
+  border: 1px solid #f8f8f8;
+  transition: all .1s ease-in-out;
+}
+.nav .active {
+  bottom: 2px;
+  right: 2px;
+  color: #09f;
+}
+
+section {
+	display: none;
+	width: 1200px;
+	padding: 20px 0;
+	margin: auto;
+}
+h2 {
+	font-size: 24px;
+	font-weight: normal;
+	color: #404040;
+}
+.method-info {color: #999;}
+.plaintext {
+	min-height: 542px;
+	padding: 20px;
+	font-family: 'coure';
+	border: 1px solid #ddd;
+	border-radius: 3px;
+}
+
+.cols {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+	justify-content: space-between;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+  margin-bottom: 10px;
+	margin-right: -10px;
+}
+.cols a,
+.cols span,
+.cols input {
+  flex: 1;
+	flex-spacing: 10px;/* 期望生效的值 */
+  padding: 5px;
+  margin-right: 10px;
+  font-size: 18px;
+  text-align: center;
+}
+.cols a {
+  background: #f2f2f2;
+  border-radius: 3px;
+}
+.cols input {font-size: 14px;}
+
+.plain-text {
+  font-size: 18px;
+  color: #36c;
+}
+.frame-plaintext {
+  margin-top: 2em;
+}
+
+.error {
+  color: #f00;
+}
+
+.caesar-line:hover {
+  background: #eee;
+}
+.caesar-line:hover:after {
+  content: ' 点击复制';
+  display: inline;
+}
+.caesar-line.hover:after {
+  content: ' 复制成功';
+}

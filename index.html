@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Criptography</title>
+	<link rel="stylesheet" href="css/styles.css">
+	<script src="js/jq.js"></script>
+</head>
+<body>
+	<div class="inputs">
+		<input id="cypher_input" class="cypher-input" type="text" placeholder="在此输入密文" />
+		<div class="searching-info"></div>
+
+		<div id="substitution_cols" class="cypher-info cols clrfix" data-get="substitution">
+			<span class="cols-title">栅栏数:</span>
+			<a class="active" href="javascript:;">2</a>
+			<a href="javascript:;">3</a>
+			<a href="javascript:;">4</a>
+			<a href="javascript:;">5</a>
+			<a href="javascript:;">6</a>
+			<a href="javascript:;">7</a>
+			<a href="javascript:;">8</a>
+			<a href="javascript:;">9</a>
+			<a href="javascript:;">10</a>
+			<input type="text" id="substitution_num" placeholder="输入栅栏数" />
+		</div>
+
+		<div class="cypher-info" data-get="morse">仅能输入 -, *, 1, 0, 编码间以 空格 分割</div>
+		<div class="cypher-info" data-get="caesar">仅改变文本中的字母</div>
+	</div>
+
+	<nav>
+		<ul id="nav" class="nav">
+			<li><a class="active" href="javascript:;" data-target="substitution">栅栏</a></li>
+			<li><a href="javascript:;" data-target="morse">摩斯电码</a></li>
+			<li><a href="javascript:;" data-target="caesar">凯撒</a></li>
+			<li><a href="javascript:;" data-target="reverse">reverse</a></li>
+			<li><a href="javascript:;" data-target="rotate13">rotate13</a></li>
+		</ul>
+	</nav>
+
+	<section id="substitution">
+		<h2>Tabel</h2>
+		<div class="plaintext"></div>
+	</section>
+
+	<section id="morse">
+		<h2>Morse Code</h2>
+		<p class="method-info"></p>
+		<div class="plaintext"></div>
+	</section>
+
+	<section id="caesar">
+		<h2>Caesar</h2>
+		<div class="plaintext"></div>
+	</section>
+
+	<section id="reverse">
+		<h2>Reverse</h2>
+		<p class="method-info"></p>
+		<div class="plaintext"></div>
+	</section>
+
+	<section id="rotate13">
+		<h2>Rotate13</h2>
+		<p class="method-info"></p>
+		<div class="plaintext"></div>
+	</section>
+
+	<script src="js/active.js"></script>
+</body>
+</html>
